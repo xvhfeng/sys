@@ -1,0 +1,7 @@
+#!/bin/sh
+#exit(0)
+#gnome-settings-daemo &    
+#gnome-power-manager &      
+#nm-applet --sm-disable &                           
+#update-notifier &
+#exec awesome
