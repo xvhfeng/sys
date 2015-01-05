@@ -24,3 +24,4 @@ if [ -f ~/.aliasrc ]; then
 fi
 
 ulimit -c unlimited
+export PATH="/Users/Seapeak/github/mysys/bin:$PATH"
