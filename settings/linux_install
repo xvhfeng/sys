@@ -1,0 +1,47 @@
+#!/bin/bash
+
+cpath=`pwd`
+
+if [ -f ~/.bash_profile ]; then
+    mv ~/.bash_profile ~/.bash_profile.mybkp
+fi
+ln -s $cpath"/bash_profile" ~/.bash_profile
+
+
+if [ -f ~/.bashrc ]; then
+    mv ~/.bashrc ~/.bashrc.mybkp
+fi
+ln -s $cpath"/bashrc4linux" ~/.bashrc
+
+
+if [ -f ~/.aliasrc ]; then
+    mv ~/.aliasrc ~/.aliasrc.mybkp
+fi
+ln -s $cpath"/aliasrc" ~/.aliasrc
+
+
+if [ -f ~/.tmux.conf ]; then
+    mv ~/.tmux.conf ~/.tmux.conf.mybkp
+fi
+ln -s $cpath"/tmux.conf" ~/.tmux.conf
+
+
+if [ -f ~/.git-completion.bash ]; then
+    mv ~/.git-completion.bash ~/.git-completion.bash.mybkp
+fi
+ln -s $cpath"/git-completion.bash" ~/.git-completion.bash
+
+# 根据当前目录得到上级目录  
+fpath=$(dirname $cpath)  
+
+chmod -R +x "$fpath/bin/"
+
+which tmux-zoom.sh
+if [ $? -gt 0 ]; then
+    echo 'export PATH="'$fpath'/bin:$PATH"' >> ~/.bashrc
+fi
+
+source ~/.bashrc
+
+echo "Init System Over!!!"
+echo "Notice:File in the path:"$fpath" is setted 777"
