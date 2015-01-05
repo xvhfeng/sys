@@ -182,19 +182,18 @@ ls -l $MARKPATH | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
 
 
 #Compact, colorized git log
-alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias aa="git add -A ."
-alias gc="git commit -m "
+alias glog="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gadd="git add -A ."
+alias gcm="git commit -m "
 alias cc="drush cc all"
 alias ccc="drush cc all; clear;"
-alias co="git checkout "
-alias gp="git pull origin "
-alias gpm="gp master"
-alias pm="git push origin master"
-alias gb="git branch"
-alias gs="git status"
-alias p="git push origin "
-alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gco="git checkout "
+alias gpull="git pull origin "
+alias gpullm="gpull master"
+alias gpushm="git push origin master"
+alias gbranch="git branch"
+alias gstatus="git status"
+alias gpush="git push origin "
 #Open github web page of current git repo
 alias github="chrome \`git remote -v | grep github.com | grep fetch | head -1 | field 2 | sed 's/git:/http:/g'\`"
 #Show log of commits not dcommitted to svn

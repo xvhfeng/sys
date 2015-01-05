@@ -1,1 +1,0 @@
-/opt/sys/settings/bin/sys/xrandr.sh

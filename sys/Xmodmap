@@ -1,6 +1,0 @@
-keycode 66 = Control_L
-keycode 108 = Escape
-clear Lock
-add Control = Control_L
-keycode 135 = Caps_Lock
-add Lock = Caps_Lock
