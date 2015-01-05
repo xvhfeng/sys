@@ -88,6 +88,7 @@ fi
 #fi
 
 
+[[ -s /root/.autojump/etc/profile.d/autojump.sh ]] && source /root/.autojump/etc/profile.d/autojump.sh
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH="/usr/local/nginx/sbin:$PATH"
 
