@@ -1,5 +1,6 @@
 #!/bin/bash
 
+alias lout="logout"
 alias c="clear"
 
 alias ..='cd ..'
@@ -153,6 +154,7 @@ alias listen="lsof -P -i -n"
 alias port='netstat -tulanp'
 #get my public ip and machineid
 alias ipinfo="curl ifconfig.me && curl ifconfig.me/host"
+alias where="ifconfig | grep inet"
 
 #get my current ip and current localtion
 getlocation() { lynx -dump http://www.ip-adress.com/ip_tracer/?QRY=$1\
