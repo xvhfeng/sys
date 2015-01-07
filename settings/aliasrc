@@ -81,7 +81,7 @@ bup() { cp "$1"{,.bak};}
 m5c() { md5sum "$1" | grep "$2";}
 
 #search for process
-alias tm='ps -ef | grep'
+alias pg='ps -ef | grep'
 #disk load
 alias dskload="ps faux|awk '\$8 ~ /D/{print}'"
 alias ps?="ps aux | grep"
@@ -155,6 +155,7 @@ alias port='netstat -tulanp'
 #get my public ip and machineid
 alias ipinfo="curl ifconfig.me && curl ifconfig.me/host"
 alias where="ifconfig | grep inet"
+alias whereis="uname -n"
 
 #get my current ip and current localtion
 getlocation() { lynx -dump http://www.ip-adress.com/ip_tracer/?QRY=$1\
