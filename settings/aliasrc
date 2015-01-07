@@ -57,8 +57,9 @@ alias tinfo='tmux info'
 alias tcmd='tmux list-commands'
 alias tlk='tmux list-keys'
 
-alias tnews='tmux new -s'
-alias tatts='tmux attach -t'
+# -2 参数必须加，因为和vim会有冲突
+alias tnews='tmux -2 new -s'
+alias tatts='tmux -2 attach -t'
 alias tsws='tmux switch -t'
 alias tls='tmux list-sessions'
 alias tres='tmux rename -t'
@@ -68,9 +69,9 @@ alias tout='tmux detach'
 tin() {
     tmux has -t $1
     if [ $? != 0 ]; then
-        tmux new -s $1
+        tmux -2 new -s $1
     fi
-    tmux attach -t $1
+    tmu -2 attach -t $1
 }
 
 alias tneww='tmux new-window'
