@@ -16,6 +16,11 @@ b() {
     cd $str
 }
 
+tmcd() {
+    [ -e $1 ] || mkdir -p "$1"
+    cd "$1"
+}
+
 #makedir and in
 mcd() {
     mkdir -p "$1"
