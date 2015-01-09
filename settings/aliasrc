@@ -187,6 +187,7 @@ ls -l $MARKPATH | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
 
 #Compact, colorized git log
 alias glog="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gurl="git remote -v"
 alias gadd="git add -A ."
 alias gcm="git commit -m "
 alias gcam="git commit -am "
