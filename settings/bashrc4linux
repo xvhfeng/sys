@@ -111,3 +111,4 @@ ulimit -c unlimited
 
 export PATH="/Users/Seapeak/github/mysys/bin:$PATH"
 export PATH="/usr/local/config/mysys/bin:$PATH"
+export PATH="/opt/config/sys/bin:$PATH"
