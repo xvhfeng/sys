@@ -1,5 +1,7 @@
 # ~/.profile: executed by Bourne-compatible login shells.
 
+TZ='Asia/Shanghai'; export TZ'
+
 if [ "$BASH" ]; then
   if [ -f ~/.bashrc ]; then
     . ~/.bashrc
