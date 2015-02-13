@@ -3,6 +3,12 @@
 alias lout="logout"
 alias c="clear"
 
+which pbcopy
+if [ $? -gt 0 ]; then
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
+fi
+
 alias ..='cd ..'
 # go back x directories
 b() {
@@ -198,8 +204,8 @@ alias gcm="git commit -m "
 alias gcam="git commit -am "
 alias cc="drush cc all"
 alias ccc="drush cc all; clear;"
-alias gfpull='git fetch --all;git reset --hard origin/master'
-alias gfpullf='git fetch --all;git reset --hard '
+alias gback2m='git fetch --all;git reset --hard origin/master'
+alias gback2='git fetch --all;git reset --hard '
 alias gco="git checkout "
 alias gpull="git pull origin "
 alias gpullm="gpull master"
