@@ -34,6 +34,7 @@ mcd() {
 }
 cls(){ cd "$1"; ls;}
 
+alias svnclean='find . -name .svn -type d -exec rm -fr {} \;'
 alias ll='ls -lasF'
 alias ll='ls -lAhGp'
 alias lf='ls -F'

@@ -87,8 +87,6 @@ fi
 #    . /etc/bash_completion
 #fi
 
-
-[[ -s /root/.autojump/etc/profile.d/autojump.sh ]] && source /root/.autojump/etc/profile.d/autojump.sh
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH="/usr/local/nginx/sbin:$PATH"
 
@@ -112,3 +110,6 @@ ulimit -c unlimited
 export PATH="/Users/Seapeak/github/mysys/bin:$PATH"
 export PATH="/usr/local/config/mysys/bin:$PATH"
 export PATH="/opt/config/sys/bin:$PATH"
+
+[[ -s /root/.autojump/etc/profile.d/autojump.sh ]] && source /root/.autojump/etc/profile.d/autojump.sh
+
