@@ -1,5 +1,7 @@
 # ~/.profile: executed by Bourne-compatible login shells.
 
+TZ='Asia/Shanghai'; export TZ
+
 if [ "$BASH" ]; then
   if [ -f ~/.bashrc ]; then
     . ~/.bashrc
@@ -8,8 +10,13 @@ fi
 
 JAVA_HOME=/opt/soft/jdk1.7.0_79
 PATH=$JAVA_HOME/bin:$PATH
+<<<<<<< HEAD
 export JAVA_HOME
 export PATH
 
 ulimit -c unlimited
+=======
+export JAVA_HOME 
+export PATH
+>>>>>>> d4585d9c942164081fb396f750e92cf057bde4ff
 mesg n
