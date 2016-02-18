@@ -6,4 +6,10 @@ if [ "$BASH" ]; then
   fi
 fi
 
+JAVA_HOME=/opt/soft/jdk1.7.0_79
+PATH=$JAVA_HOME/bin:$PATH
+export JAVA_HOME
+export PATH
+
+ulimit -c unlimited
 mesg n
