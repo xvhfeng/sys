@@ -3,7 +3,7 @@
 alias lout="logout"
 alias c="clear"
 
-which pbcopy
+#which pbcopy
 if [ $? -gt 0 ]; then
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
@@ -198,22 +198,23 @@ ls -l $MARKPATH | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
 
 
 #Compact, colorized git log
-alias glog="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias gurl="git remote -v"
-alias gadd="git add -A ."
-alias gcm="git commit -m "
-alias gcam="git commit -am "
+alias git-log="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias git-url="git remote -v"
+alias git-add="git add -A ."
+alias git-commit-m="git commit -m "
+alias git-commit-am="git commit -am "
 alias cc="drush cc all"
 alias ccc="drush cc all; clear;"
-alias gback2m='git fetch --all;git reset --hard origin/master'
-alias gback2='git fetch --all;git reset --hard '
-alias gco="git checkout "
-alias gpull="git pull origin "
-alias gpullm="gpull master"
-alias gpushm="git push origin master"
-alias gbranch="git branch"
-alias gstatus="git status"
-alias gpush="git push origin "
+alias git-reset-hard="git reset --hard"
+alias git-reset-hard-master='git fetch --all;git reset --hard origin/master'
+alias git-reset-hard-all='git fetch --all;git reset --hard '
+alias git-checkout="git checkout "
+alias git-pull-from="git pull origin "
+alias git-pull-from-master="gpull master"
+alias git-push-to-master="git push origin master"
+alias git-branch="git branch"
+alias git-status="git status"
+alias git-push-to="git push origin "
 #Open github web page of current git repo
 alias github="chrome \`git remote -v | grep github.com | grep fetch | head -1 | field 2 | sed 's/git:/http:/g'\`"
 #Show log of commits not dcommitted to svn
