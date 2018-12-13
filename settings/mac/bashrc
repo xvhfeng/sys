@@ -1,0 +1,30 @@
+#!/bin/bash
+
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home"
+export MAVEN_HOME="/Users/xuhaifeng/work/apache-maven-3.6.0"
+
+export PATH=$JAVW_HOME/bin:$MAVEN_HOME/bin:$PATH
+
+#添加git的自动完成命令功能
+if [ -f ~/.git-completion.bash ]; then
+    source ~/.git-completion.bash
+fi
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    source /usr/local/bin/virtualenvwrapper.sh
+fi
+
+if [ -f ~/.aliasrc ]; then
+    source ~/.aliasrc
+fi
+
+ulimit -c unlimited
+
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
+
