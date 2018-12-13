@@ -5,7 +5,7 @@
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home"
 export MAVEN_HOME="/Users/xuhaifeng/work/apache-maven-3.6.0"
 
-export PATH=$JAVW_HOME/bin:$MAVEN_HOME/bin:$PATH
+export PATH=$JAVA_HOME/bin:$MAVEN_HOME/bin:$PATH
 
 #添加git的自动完成命令功能
 if [ -f ~/.git-completion.bash ]; then
