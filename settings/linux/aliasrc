@@ -3,6 +3,7 @@
 alias lout="logout"
 alias c="clear"
 alias e="vim"
+alias vi="vim"
 
 #which pbcopy
 if [ $? -gt 0 ]; then
